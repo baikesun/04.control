@@ -2,19 +2,21 @@
 
 int main(void)
 {
+	int num=0;
+	char str[100];
 	char c;
 	
-	printf("input a char : ");
-	scanf("%c", &c);
+	printf("input a string : ");
 	
-	if('0'<=c&&c<='9')
-		printf("This is a NUMBER.\n");
-	else if('A'<=c&&c<='Z')
-		printf("This is a CAPITAL LETTER.\n");
-	else if('a'<=c&&c<='z')
-		printf("This is a SMALL LETTER.\n");
-	else
-		printf("This is a SPECIAL CHAR.\n");
+	while ((c=getchar()) != '\n')
+	{
+		if('0'<=c && c<='9')
+		{
+			num++;
+		}
+	}
+	
+	printf("The number of digits is %d", num);
 	
 	return 0;
 }
