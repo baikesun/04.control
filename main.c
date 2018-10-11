@@ -2,21 +2,27 @@
 
 int main(void)
 {
-	int num=0;
-	char str[100];
-	char c;
+	int answer=59;
+	int trial;
+	int i;
 	
-	printf("input a string : ");
-	
-	while ((c=getchar()) != '\n')
+	do
 	{
-		if('0'<=c && c<='9')
-		{
-			num++;
-		}
+		printf("Guess a number : ");
+		scanf("%d", &i);
+		
+		trial++;
+		
+		if(i<answer)
+			printf("Low\n");
+		else if(i>answer)
+			printf("High\n");
 	}
+		while(i!=answer);
 	
-	printf("The number of digits is %d", num);
-	
+
+		printf("Congratulation! Trials : %d", trial);
+
+		
 	return 0;
 }
