@@ -2,15 +2,19 @@
 
 int main(void)
 {
-	int number;
+	char c;
 	
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d", &number);
+	printf("input a char : ");
+	scanf("%c", &c);
 	
-	if(number>=0)
-		printf("절댓값은 %d입니다.\n", number);
+	if('0'<=c&&c<='9')
+		printf("This is a NUMBER.\n");
+	else if('A'<=c&&c<='Z')
+		printf("This is a CAPITAL LETTER.\n");
+	else if('a'<=c&&c<='z')
+		printf("This is a SMALL LETTER.\n");
 	else
-		printf("절댓값은 %d입니다.\n", -number);
-		
+		printf("This is a SPECIAL CHAR.\n");
+	
 	return 0;
 }
